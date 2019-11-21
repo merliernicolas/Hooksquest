@@ -10,7 +10,11 @@ function Counter() {
       <p>Le compteur est à : {count} </p>
       <button onClick={() => setCount(count + 1)}>+1</button>
       <button onClick={() => setCount(count - 1)}>-1</button>
-      <input value={count} onChange={event => setCount(event.target.value)} />
+      <input
+        type="number"
+        value={count}
+        onChange={event => setCount(parseInt(event.target.value))}
+      />
     </div>
   );
 }
